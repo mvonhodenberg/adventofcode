@@ -1,7 +1,7 @@
 from typing import Counter
 
 
-f=open('depths.txt','r')
+f=open('day1input.txt','r')
 depths=f.read().split('\n')
 depths=[int(x) for x in depths]
 def FindIncreases(l):
