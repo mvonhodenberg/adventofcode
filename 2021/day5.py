@@ -1,6 +1,6 @@
 import re
 
-f=open('day5input.txt','r')
+f=open('2021/day5input.txt','r')
 lines=f.read().split('\n')
 commands=[]
 for line in lines:
@@ -17,7 +17,7 @@ def part1():
             p,q=min(c[0][0],c[1][0]),max(c[0][0],c[1][0])+1
             for x in range(p,q):
                 grid[c[0][1]][x]+=1
-    print('part 1:',sum([sum(i > 1 for i in row) for row in grid]))
+    return sum([sum(i > 1 for i in row) for row in grid])
 def part2():
     grid=[[0 for col in range(1000)] for row in range(1000)]
     for c in commands:
@@ -43,6 +43,6 @@ def part2():
                     grid[c[0][1]-z][c[0][0]+z]+=1
                 if s<0:
                     grid[c[0][1]+z][c[0][0]-z]+=1
-    print('part 2:',sum([sum(i > 1 for i in row) for row in grid]))
-part1()
-part2()
+    return sum([sum(i > 1 for i in row) for row in grid])
+print('part 1:',part1())
+print('part 2:',part2())

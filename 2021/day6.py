@@ -1,5 +1,5 @@
 def numfish(days):
-    f=open('day6input.txt','r').read().split(',')
+    f=open('2021/day6input.txt','r').read().split(',')
     fish=[f.count(str(i)) for i in range(9)]
     for d in range(days):
         a=fish[0]

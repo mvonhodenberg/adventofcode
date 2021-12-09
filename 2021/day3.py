@@ -1,5 +1,5 @@
 from collections import Counter
-f=open('day3input.txt','r')
+f=open('2021/day3input.txt','r')
 nums=f.read().split('\n')
 def part1():
     gamma=''
@@ -8,7 +8,7 @@ def part1():
         data = Counter([a[i] for a in nums])
         gamma+=data.most_common(1)[0][0]
         epsilon+=data.most_common()[1][0]
-    print(int(gamma,2)*int(epsilon,2))
+    return int(gamma,2)*int(epsilon,2)
 
 def part2():
     l=nums
@@ -39,7 +39,7 @@ def part2():
             pass
         j+=1
     co2=int(m[0],2)
-    print(oxygen*co2)
+    return oxygen*co2
 
-part1()
-part2()
+print('part 1:',part1())
+print('part 2:',part2())

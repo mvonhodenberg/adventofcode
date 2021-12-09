@@ -1,5 +1,5 @@
 import numpy as np
-f=open('day4input.txt','r')
+f=open('2021/day4input.txt','r')
 lines=f.read().split('\n')
 nums=[int(x) for x in lines[0].split(',')]
 del lines[0]
@@ -38,5 +38,5 @@ def part2():
                         else:
                             if i not in won:
                                 won.append(i)
-print(part1())
-print(part2())
+print('part 1:',part1())
+print('part 2:',part2())

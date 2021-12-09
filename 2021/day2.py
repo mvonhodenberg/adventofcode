@@ -1,4 +1,4 @@
-f=open('day2input.txt','r')
+f=open('2021/day2input.txt','r')
 commands=f.read().split('\n')
 def part1():
     position=0
@@ -12,7 +12,7 @@ def part1():
             depth-= units
         if dir=='down':
             depth+=units
-    print(position*depth)
+    return position*depth
 def part2():
     position=0
     depth=0
@@ -27,6 +27,6 @@ def part2():
             aim-= units
         if dir=='down':
             aim+=units
-    print(position*depth)
-part1()
-part2()
+    return position*depth
+print('part 1:',part1())
+print('part 2:',part2())
