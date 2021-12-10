@@ -1,4 +1,4 @@
-f=open('2021/day2input.txt','r')
+f=open('2021/input/day2input.txt','r')
 commands=f.read().split('\n')
 def part1():
     position=0

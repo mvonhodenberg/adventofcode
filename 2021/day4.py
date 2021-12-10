@@ -1,5 +1,5 @@
 import numpy as np
-f=open('2021/day4input.txt','r')
+f=open('2021/input/day4input.txt','r')
 lines=f.read().split('\n')
 nums=[int(x) for x in lines[0].split(',')]
 del lines[0]
