@@ -1,33 +1,33 @@
-f=open('2021/input/day11input.txt','r').read().split('\n')
-grid=[]
-for line in f:
-    grid.append([int(char) for char in line])
-m=len(grid)
-def incrementby1(i,j,g):
-    if i!=0:
-        g[i-1,j]+=1
-        if j!=0:
-            g[i,j-1]+=1
-        if j!=m:
-            g[i-1,j+1]+=1
-    if i!=m:
-        g[i+1,j]+=1
-        if j!=m:
-            g[i+1,j+1]+=1
-        if j!=0:
-            g[i+1,j-1]+=1
-    if j!=0:
-        g[i,j-1]+=1
-    if j!=m:
-        g[i,j+1]+=1
-    return g
-def flash(g):
-    flashcounter=0
-    flashed=([0]*m)*m
-    for i in range(m):
-        for j in range(m):
-            if g[i][j]==9:
-                g=incrementby1(i,j,g)
-                flashcounter+=1
-                g[i][j]=0
-    return g
+import numpy as np
+from scipy.signal import convolve2d
+
+#This mostly isn't my code, I just wanted to include this day for the sake of completeness; it was a boring and annoying task.
+
+data=open('2021/input/day11input.txt').read()
+
+
+def flash(arr):
+    arr += 1
+    mask = np.array([[1, 1, 1], [1, 0, 1], [1, 1, 1]])
+    flashed = np.zeros(arr.shape, dtype=bool)
+    while np.any(flashing := arr > 9):
+        flashed |= flashing
+        arr += convolve2d(flashing, mask, mode='same')
+        arr[flashed] = 0
+    return flashed
+
+def part1(data, steps=100):
+    arr = np.array([[*line] for line in data.splitlines()], dtype=int)
+    return sum(flash(arr).sum() for _ in range(steps))
+
+def part2(data):
+    arr = np.array([[*line] for line in data.splitlines()], dtype=int)
+    
+    step = 0
+    while np.any(arr):
+        flash(arr)
+        step += 1
+    return step
+
+print('Part 1:', part1(data))
+print('Part 2:', part2(data))
