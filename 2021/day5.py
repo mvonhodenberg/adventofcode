@@ -1,6 +1,6 @@
 import re
 
-f=open('2021/input/day5input.txt','r')
+f=open('2021/input/day5.txt','r')
 lines=f.read().split('\n')
 commands=[]
 for line in lines:

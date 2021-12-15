@@ -1,6 +1,6 @@
 from collections import Counter
 
-f=open('2021/input/day12input.txt','r').read().split('\n')
+f=open('2021/input/day12.txt','r').read().split('\n')
 connections={}
 for line in f:
     [a,b]=line.split('-')

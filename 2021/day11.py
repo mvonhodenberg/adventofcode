@@ -3,7 +3,7 @@ from scipy.signal import convolve2d
 
 #This mostly isn't my code, I just wanted to include this day for the sake of completeness; it was a boring and annoying task.
 
-data=open('2021/input/day11input.txt').read()
+data=open('2021/input/day11.txt').read()
 
 
 def flash(arr):

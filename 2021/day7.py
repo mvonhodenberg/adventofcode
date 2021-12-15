@@ -1,5 +1,5 @@
 import math
-c=[int(x) for x in open('2021/input/day7input.txt','r').read().split(',')]
+c=[int(x) for x in open('2021/input/day7.txt','r').read().split(',')]
 m=math.inf
 for i in range(0,len(c)):
     s=sum([abs(x-i) for x in c])

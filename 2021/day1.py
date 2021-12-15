@@ -1,4 +1,4 @@
-f=open('2021/input/day1input.txt','r')
+f=open('2021/input/day1.txt','r')
 depths=f.read().split('\n')
 depths=[int(x) for x in depths]
 def FindIncreases(l):

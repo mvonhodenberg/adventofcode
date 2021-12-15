@@ -1,5 +1,5 @@
 from collections import Counter
-f=open('2021/input/day3input.txt','r')
+f=open('2021/input/day3.txt','r')
 nums=f.read().split('\n')
 def part1():
     gamma=''
