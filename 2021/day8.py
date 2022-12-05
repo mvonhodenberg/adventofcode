@@ -1,5 +1,5 @@
 from itertools import groupby
-lines=open('2021/input/day8input.txt','r').read().split('\n')
+lines=open('2021/input/day8.txt','r').read().split('\n')
 s=0
 for line in lines:
     l=line.split('|')[1].split()

@@ -1,4 +1,4 @@
-lines=open('2021/input/day10input.txt','r').read().split('\n')
+lines=open('2021/input/day10.txt','r').read().split('\n')
 pairs={'(':')','{':'}','[':']','<':'>'}
 corruptscores={')':3,']': 57,'}':1197,'>':25137}
 completescores={')':1,']': 2,'}':3,'>':4}

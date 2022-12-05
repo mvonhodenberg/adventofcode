@@ -1,5 +1,5 @@
 import numpy as np
-f=open('2021\input\day13input.txt').read().split('\n')
+f=open('2021\input\day13.txt').read().split('\n')
 width,height=0,0
 coords=[]
 folds=[]

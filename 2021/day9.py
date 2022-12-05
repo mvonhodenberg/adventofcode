@@ -1,4 +1,4 @@
-f=open('2021/input/day9input.txt','r').read().split('\n')
+f=open('2021/input/day9.txt','r').read().split('\n')
 grid=[]
 for line in f:
     grid.append([int(char) for char in line])
